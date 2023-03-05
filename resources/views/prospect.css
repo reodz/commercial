@@ -1,0 +1,284 @@
+:root {
+    --main-col: blue;
+    --sec-col: #4ad5ff;
+    --text-col: #b6b2b4;
+    --cal: (100% - 10%)/5
+}
+
+/* star standers */
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+.blur {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #ddddddf5; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    display: none;
+    transition: 3s;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+.container {
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 21vw;
+    /* margin-right: 1vw; */
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+
+ul li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* end standers */
+/* start globlayes */
+/* small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* meduim */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* .cont {
+    position: relative;
+    background-color: #f5f5f5;
+} */
+
+
+.nav ul li {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+.nav .more {
+    font-size: 15px;
+}
+
+.client {
+    background-color: white;
+    height: 50px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 19%) 5%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    /* display: none; */
+}
+
+.client .c-name {
+    font-weight: 700;
+    color: var(--main-col);
+    /* colro: b; */
+    letter-spacing: 1px;
+    text-transform: uppercase
+}
+
+.client .contact {
+    position: relative;
+}
+
+.client .contact i {
+    padding-right: 10px;
+    color: var(--main-col);
+    font-size: 18px;
+}
+
+.show {
+    color: blue;
+    font-size: 25px;
+
+}
+
+
+
+.contact .phone-num {
+    /* content: '0786315763'; */
+    position: absolute;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    font-size: 14px;
+    top: 32px;
+    right: 25px;
+    letter-spacing: 1px;
+    display: none;
+}
+
+.contact .phone-num::before {
+    content: '';
+    position: absolute;
+
+    top: -19px;
+    border: 10px solid;
+    border-color: transparent transparent black transparent;
+}
+
+.contact .phone:hover~.phone-num {
+    display: block;
+}
+
+.contact .email-num {
+    /* content: '0786315763'; */
+    position: absolute;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    font-size: 14px;
+    top: 32px;
+    right: 50px;
+    letter-spacing: 1px;
+    display: none;
+}
+
+.contact .email-num::before {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: -19px;
+    border: 10px solid;
+    border-color: transparent transparent black transparent;
+}
+
+.contact .email:hover~.email-num {
+    display: block;
+}
+
+.more-info {
+    background-color: #f6f6f6;
+    width: 60vw;
+    height: 80vh;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    transition: 2s;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.more-info .remove {
+    float: right;
+    padding: 5px 10px;
+}
+
+.fill ul {
+    padding: 30px;
+}
+
+.fill ul li {
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.fill ul li h1 {
+    font-size: 30px;
+    color: var(--main-col);
+    font-weight: 400;
+}
+
+/* .more-info ul li P {} */
+.show-add {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    /* width: 30px; */
+    /* height: 30px; */
+    color: var(--main-col);
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 8px 15px;
+    border: 2px solid var(--main-col);
+}
+
+.add {
+    background-color: #f6f6f6;
+    width: 60vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    transition: 2s;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.add input[type="text"] {
+    background-color: transparent;
+    /* border: none; */
+    border-color: transparent;
+    border-bottom-color: black;
+}
+
+.add input[type="text"]:focus {
+    outline: none;
+}
+
+.add input[type="submit"] {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    border-color: transparent;
+    background-color: var(--main-col);
+    color: white;
+    padding: 5px;
+}
